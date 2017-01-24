@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 
 const publicPath = path.join(__dirname, '../public')
-const PORT = process.env.port || 3000
+const PORT = process.env.PORT || 3000
 
 let app = express()
 
