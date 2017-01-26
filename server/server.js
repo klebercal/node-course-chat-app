@@ -16,11 +16,11 @@ io.on('connection', (socket) => {
   console.log('New user connected')
 
   socket.on('createMessage', (message) => {
-    message.createdAt = new Date().getTime()
+    console.log('createMessage', message)
 
-    socket.emit('newMessage', message)
-    
-    console.log(message)
+    message.createdAt = new Date().getTime()
+    io.emit('newMessage', message)
+
   })
 
   socket.on('disconnect', () => {
